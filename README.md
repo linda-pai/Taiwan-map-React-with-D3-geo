@@ -14,3 +14,9 @@ JSON Editor:
 
 <img src="https://user-images.githubusercontent.com/66729413/91699528-00943480-eba7-11ea-8ff5-cf4728310175.PNG"></img>
 
+彩色版本：
+
+ .style("fill",function() {
+        return "hsl(" + Math.random() * 1080 + ",56%,82%)";
+        })
+
