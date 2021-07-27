@@ -24,4 +24,54 @@ inspired by @muratkemaldar ！thanks for sharing！
 
 ![d3-react-taiwan-map](https://user-images.githubusercontent.com/66729413/127157091-6b3b2904-967b-447b-a997-1744ea237816.gif)
 
+＊由於react控制dom的機制會與d3.js有所衝突，右邊的table也是用d3.js畫的
+即可順利地圖和table互動 
+
+ 
+ ```
+  //渲染表格
+  drawTable
+    .append('tbody')
+    .selectAll('tr')
+    .data(county1).enter()
+    .append('tr')
+    .on("mouseover", function (d, i, event) {
+
+      let id = event[i].innerText
+      d3.selectAll('.country')
+        .classed("countyColor", function (e, j, value) {
+          let matchId = value[j].id
+          return id.match(matchId);
+        })
+    })
+    .on("mouseout", () => {
+      d3.selectAll('.country')
+        .classed("countyColor", false)
+    })
+    .selectAll('td')
+    .data(function (row, i) {
+      return columns.map(function (c) {
+        var cell = {};
+        d3.keys(c).forEach(function (k) {
+          cell[k] = typeof c[k] == 'function' ? c[k](row, i) : c[k];
+        });
+
+        return cell;
+      });
+    }).enter()
+    .append('td')
+    .html(ƒ('html'))
+    .attr('class', ƒ('Data'))
+    .attr("class", function (d) {
+      if (d["Data"] == 'countyValue') {
+        return 'countyValue';
+      }
+      if (d["Id"] == 'COUNTYID') {
+        return 'COUNTYID';
+      }
+    })
+    .classed('map-li', true)
+  
+ ```
+
 
