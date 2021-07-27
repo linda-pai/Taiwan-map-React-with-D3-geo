@@ -2,15 +2,7 @@
 interactive Taiwan map with table
 inspired by @muratkemaldar ！thanks for sharing！
 
-中華民國縣市GeoJson下載來源:
-
-[(https://sheethub.com/ronnywang/%E4%B8%AD%E8%8F%AF%E6%B0%91%E5%9C%8B%E7%B8%A3%E5%B8%82)]
-
-
-        
-        
- 進階版本：
- 用d3.js運算，縣市顏色以數據深淺顯示
+ 用d3.js運算，縣市顏色以數據深淺顯示:
  
  ```
   //抓取縣市數據的最大與最小值
@@ -74,4 +66,6 @@ inspired by @muratkemaldar ！thanks for sharing！
   
  ```
 
+中華民國縣市GeoJson下載來源:
 
+[(https://sheethub.com/ronnywang/%E4%B8%AD%E8%8F%AF%E6%B0%91%E5%9C%8B%E7%B8%A3%E5%B8%82)]
